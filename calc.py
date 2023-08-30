@@ -7,7 +7,7 @@ while True:                                                                     
         if 'q' in equation:                                                     # 'q' to exit the program
             break
         
-        equation = equation.strip().replace('**','^').replace(',','.').replace('x','*').replace(':','/')          # Remove whitespace from the equation and replace ** with ^ to avoid errors and confusion with a single *
+        equation = equation.strip().replace('**','^').replace(',','.').replace('x','*').replace(':','/')          # Remove whitespace from the equation and replace ** with ^ to avoid errors and confusion with a single *, and other possible variations of operators. 
         
 
         numbers = re.findall(r'(?:\d*\.)?\d+', equation)                        # Creating a regular expression pattern to find all numbers in the equation, including decimals
